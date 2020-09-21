@@ -1,0 +1,19 @@
+.header-top{
+    font-size: 14px;
+}
+a{ color: black}
+.fa{color:black}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {
+  text-decoration: none;
+    
+}
+a:active {
+  text-decoration: none;
+}
+.carosel-text {font-family: 'Great Vibes', cursive;
+font-size: 30px}
+.carosel-header { font-family: 'Dosis', sans-serif;}
+.product-name{font-family: 'Great Vibes', cursive;
+}

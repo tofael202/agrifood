@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bootstrap Tutorial Sample Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ 
+     
+<!..Top Header Start ..!>
+    
+  
+  <div class="header-top container-fluid bg-light">
+	<div class="container">
+		<div class="row text-light pt-2 pb-2">
+			<div class="col-md-3 col-sm-6 col-6">
+			    <i class="fa fa-mobile" aria-hidden="true"></i>
+			    <a href="" c>Call Us: 0170000000</a> 
+			    
+			 </div>
+			<div class="col-md-3 col-sm-6 col-6">
+			<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<a href="" >Email Us: info@gmail.com</a> 
+				
+
+			</div>
+			<div class="col-md-2">
+			    
+			</div>
+			<div class="col-md-2 col-sm-6 col-6">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <a href="" > My Account </a>
+			</div>
+			<div class="col-md-2 col-sm-6 col-6">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <a href="" >Shopping Cart</a> 
+			</div>
+		</div>
+	</div>
+</div>
+    
+    
+    <!..Top Header End ..!>
+    
+    
+    <!..Navbar Start ..!>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-success ">
+          <a class="navbar-brand text-white " href="#">AgriFood</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Link</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Products</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <form class="form-inline my-2 my-lg-0">
+              <button type="button" class="btn btn-light m-2" data-toggle="modal" data-target="#login">
+                  Login 
+                </button>
+                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#register">
+                  Register
+                </button>
+              
+            </form>
+          </div>
+          
+          <!-- Login Modal -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                           <input type="text" id="email" class="form-control" name="email" onkeyup="mailvalidate();"  placeholder="example@gmail.com"> <span id="inv-mail" style="display:none;color: red">Invalid Email</span><br/>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          
+                        </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+         <!-- Login Modal End-->
+        
+        
+        <!-- Regestration Modal -->
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Registration</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body" >
+                          <div class="modal-body">
+                            <form>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="InputFname">First Name</label>
+                                        <input type="text" class="form-control" id="InputFname" aria-describedby="emailHelp" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="InputLname">Last Name</label>
+                                        <input type="text" class="form-control" id="InputLname" aria-describedby="emailHelp" placeholder="Last Name">
+                                    </div>
+                                  </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="InputEmail">Email</label>
+                                        <input type="text" onkeyup="mailvalidate1();" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="example@gmail.com">
+                                        <span id="inv-mail1" style="display:none;color: red">Invalid Email</span><br/>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Confirm Email</label>
+                                        <input type="text" onkeyup="mailvalidate2(),mailvalidate3();" class="form-control" id="email2" aria-describedby="emailHelp" placeholder="Must be same email">
+                                        <span id="inv-mail2" style="display:none;color: red">Invalid Email</span><br/>
+                                        <span id="inv-mail3" style="display:none;color: red">Email not same</span><br/>
+                                  </div>
+                                </div>  
+                                <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Mirpur">
+                              </div>
+                             
+                                  <div class="form-row">
+
+                                    <div class="form-group col-md-6">
+                                      <label for="exampleInputEmail1">Phone</label>
+                                        <input type="text" class="form-control" id="phn_no" aria-describedby="emailHelp" onkeyup="phonevalidate();" placeholder="Phone">
+                                        <span id="inv-phn" style="display:none;color: red">Not BD phone number</span><br/>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                      <label for="inputCity">City</label>
+                                      <input type="text" class="form-control" id="inputCity" placeholder="City">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                      <label for="inputZip">Zip</label>
+                                      <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                  </div>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" onkeyup="passvalidate();"  class="form-control" id="pass1"> <span id="inv-pass1" style="display:none;color: red">Invalid password</span><br/>
+                                        <small id="emailHelp" class="form-text text-muted">Password must 8 char,1 upper,1 lower,1 number , 1  sepecial</small>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="exampleInputPassword1">Confirm Password</label>
+                                        <input type="password" class="form-control" id="pass2" onkeyup="passvalidate2(),passvalidate3();">
+                                        <span id="inv-pass2" style="display:none;color: red">Invalid password</span><br/>
+                                        <span id="inv-pass3" style="display:none;color: red">Password does not match</span><br/>
+                                    </div>
+                                    
+                                  </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Gender :</label>
+
+                                    </div>
+                                  <div class="form-group">
+
+
+                                                <div class="form-check form-check-inline">
+
+                                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                              <label class="form-check-label" for="inlineRadio1">Male</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                              <label class="form-check-label" for="inlineRadio2">Female</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                              <label class="form-check-label" for="inlineRadio3">Others</label>
+                                            </div>
+
+                                              </div>
+
+
+
+                                </form> 
+
+                        </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Register</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                        </div>
+        
+          <!-- Regestration Modal end-->                
+</nav>
+     
+     
+
+ 
+ <!-- Bootstrap modal for product end here -->
+ <div class="container">
+<br>  <h2 style="text-align: center" > Admin Dashoboard   </h2>
+<hr>
+
+<div class="container">
+    <form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Product Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Producat name">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Product Price</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Product quantity</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Producat">
+  </div>
+  <div class="form-group col-md-4">
+      <label for="inputState">Action</label>
+      <select id="inputState" class="form-control">
+        
+        <option>ADD</option>
+        <option>Update</option>
+        <option>Delete</option>
+      </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+
+
+ 
+ 
+ 
+
+ <!-- Bootstrap footer start list here -->
+ 
+ <div class="footer_section bg-light pt-4">
+	   <div class="container">
+	   <div class="row">
+	   
+	 <div class="col-md-3 col-sm-3 col-6 ">
+	 <h5 class="text-danger">Customer Service</h5>
+        <ul class="list-unstyled">
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Become Seller</a></li>
+          
+           <li><a href="">My Account</a></li>
+          <li><a href="">Return Products</a></li>
+        </ul>
+</div>
+            <div class="col-md-3 col-sm-3 col-6 ">
+        <h5 class="text-danger">Our Information</h5>
+        <ul class="list-unstyled">
+                   <li><a href="">About Our Company</a></li>
+                    <li><a href="">Delivery Information</a></li>
+                    <li><a href="">Payment method</a></li>
+          
+        </ul>
+      </div>
+                 <div class="col-md-3 col-sm-3 col-6 ">
+        <h5 class="text-danger">Social Link</h5>
+        <ul class="list-unstyled">
+                   <li class="facebook"><i class="fa fa-facebook-square text-primary" aria-hidden="true"></i><a href="#"> Facebook</a></li>
+                    <li class="twitter"><i class="fa fa-twitter text-danger" aria-hidden="true"></i><a href="#"> Twitter</a></li>
+                    <li class="youtube"><i class="fa fa-youtube-play text-danger" aria-hidden="true"></i><a href="#"> YouTube</a></li>
+                </ul>
+      </div>
+     
+	 <div class="col-md-3 col-sm-3 col-6">
+		   
+ <h5 class="text-danger">Shop Details</h5>
+
+        <ul  class="list-unstyled">
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Mirpur,Dhaka</li>
+            <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+
+                   Call us: <span>0170000000</span>
+
+            </li>
+
+            <li>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                   Email us: <span>info@agrifood.com</span>
+
+            </li>
+        </ul>
+		
+ </div>
+	 
+</div>
+	</div>
+	
+  </div>
+  
+   
+ <!-- Bootstrap footer end here -->
+ 
+  
+ <!-- Bootstrap copright footer start 011153016 -->
+ <div class="copyright_section bg-success">
+<div class=" container">
+	
+	
+	<div class="copyright" style="text-align: center">Developed by @ Tofael Ahmed</div>
+	</div>
+	</div> 
+	
+<!-- Bootstrap copright footer start 011153016 -->	
+
+
+
+    
+  <script src="js/jquery-1.12.4.min.js"></script> 
+  <script src="js/popper.min.js"></script>  
+  <script src="js/bootstrap.min.js"></script>    
+  <script src="js/main.js"></script>
+
+  
+  
+</body>
+
+</html>
